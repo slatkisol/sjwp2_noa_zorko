@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skriptni jezici</title>
+</head>
+
+<style>
+    td{
+        border: 1px gray solid;
+        padding: 10px;
+    }
+    body{
+        background-color:#C2F8F6;
+    }
+    h1{
+        font-size: 2.3em;
+        font-weight: bold;
+        
+    }
+    p{
+        margin-right:7px ;
+        margin-left: 7px;
+        color: rgb(184, 54, 200);
+    }
+    img{
+        width: 480px;
+        height: 220px;
+
+    
+    }
+
+    form{
+        width: 50%;
+        border-radius: 3px;
+
+        
+    }
+
+    button{
+        color: #C2F8F6;
+        width: 50%;
+        border-radius: 3px;
+    }
+</style>
+<body>
+    <h1>HTML, CSS, Canvas i SVG</h1>
+    <p>Canvas je HTML5 element koji, pomoću JavaScript-a, omogućava dinamičko iscrtavanje
+       različitih oblika, dodavanje slika, kreiranje animacija na web stranici i sl.
+        <br> <br>
+       Na platnu (canvas-u) to ne radimo korištenjem novog jezika (kao što je to slučaj kod SVG) ili
+       korištenjem Flasha. Najčešće uporabe platna su:
+       </p>
+       <br>
+       <ul>
+        <li>crtanje grafova,</li>
+        <li>animiranje, igre i</li>
+        <li>kompozicija slike.</li>
+      
+
+       </ul>
+       <p> <strong>SVG</strong>(Scalable Vector Graphics) grafika ne gubi kvalitetu prilikom zumiranja ili resize-a.
+       <br><br>
+      
+Svi crteži mogu biti interaktivni i dinamički. Svaki element i atribut SVG datoteke može biti
+animiran. Animacije mogu biti definirane i pokrenute interaktivno ili pomoću skripti.
+</p>
+<br>
+<br>
+<p>SVG integrira druge W3C standarde kao što su DOM, XSL …</p>
+<br>
+<br>
+<hr>
+<br>
+ 
+       <h3>Usporedba SVG-a i Canvasa</h3>
+       <table>
+
+        <tr>
+            <td>SVG</td>
+            <td>HTML Canvas</td>
+
+        </tr>
+
+        <tr>
+            <td>SVG ima bolju skalabilnost, tako da može imati bolje slike sa velikom
+            kvalitetom na bilo kojoj rezoluciiji</td>
+        
+        <td>Canvas ima lošu skalabilnost. Nije prikladan za rad s velikim rezolucijama</td>
+
+        <tr>
+
+            <tr>
+                <td>SVG daje bolje perfomanse sa manjim brojem objekata ili većom površinom</td>
+                <td>Canvas daje bolje perfomanse za rad sa manjim površinama ili većim brojem objekata</td>
+                </tr>
+                <tr>
+
+                <td>SVG se može modificirati uz pomoć skripte i CSS-a</td>
+                <td>Canvas se može modificirati samo uz pomoć skripte</td>
+             </tr>
+
+             <tr>
+                <td>SVG je baziran na vektorima i sastavljen je od oblika</td>
+                <td>Canvas je baziran na pixelima</td>
+             </tr>
+
+       
+       </table>
+    
+       
+
+        <img src="/ponavljanje/Snimka zaslona 2025-10-14 111003.png" alt="">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br><br><br>
+
+        <svg style="border: 3px solid black;" width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+
+            <rect width="500" height="400" x="0" y="0"  fill="lightblue" />
+            <rect width="500" height="150" x="0" y="280"  fill="blue" />
+             <rect width="200" height="40" x="100" y="260"  fill="brown" />
+             <polygon points="197,110 267,250 117,250" style="fill:white;" />
+             <rect width="11" height="190" x="190" y="70"  fill="black" />
+             <polygon points="135,95 185,80 185,110" style="fill:green;" />
+             <circle r="45" cx="430" cy="70" fill="yellow" />
+            
+             
+            
+
+
+
+        </svg>
+        <br><br><br><br><br><br><br>
+        <canvas id="myCanvas" width="600" height="600" style="border: 2px solid black;"></canvas>
+    <script>
+         let c = document.getElementById("myCanvas");
+        let ctx= c.getContext("2d");
+         ctx.beginPath();
+         ctx.rect(0, 0, 500, 250);
+
+
+
+        </script>
+
+        
+
+
+
+        <br><br><br><br><br><br><br>
+        <form  action="">
+            <label for="">Ime:</label><br>
+            <input type="text" id="" name=""><br>
+            <label for="">Prezime:</label><br>
+            <input type="text" id="" name=""><br>
+            <label for="">E-mail:</label><br>
+            <input type="text" name="" id=""><br>
+            <label for="">Poruka:</label><br>
+            <textarea name="" id=""></textarea><br>
+            <input type="submit" value="Submit">
+
+         
+
+
+        </form>
+
+
+        
+</body>
+</html>
