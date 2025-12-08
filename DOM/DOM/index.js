@@ -16,3 +16,5 @@ document.getElementsByClassName("btn").element.classList.add("active");
 
 document.getElementsByClassName("list")[1].element.classList.remove("list");
 
+
+document.querySelector("a").style.color="green";
