@@ -26,7 +26,7 @@ document.querySelector("ol").getAttribute("href"); //12
 
 document.querySelector("a")[1].setAttribute("href","https://yahoo.com"); //13
 
-document.getElementsByClassName(".list")[1].className.remove("list"); //14
+document.getElementsByClassName(".list")[1].classList.remove("list"); //14
 
 document.querySelectorAll("#list")[0].textContent="kojkwd"; //15
 
