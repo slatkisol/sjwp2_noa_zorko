@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: grey;
+        }
+
+        .container {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 12px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5a67d8;
+        }
+
+        .results {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .results h2 {
+            font-size: 16px;
+            color: #444;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weight Converter</h1>
+        <input type="number" id="input1" placeholder="Enter weight">
+        <button id="gumb">Convert</button>
+
+        <div class="results">
+            <h2 id="pound"></h2>
+            <h2 id="ounce"></h2>
+            <h2 id="gram"></h2>
+        </div>
+    </div>
+
+    <script src="index4.js"></script>
+</body>
+</html>

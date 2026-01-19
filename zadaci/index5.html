@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: grey;
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h2 {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+            text-align: center;
+        }
+
+        input:focus {
+            border-color: #6c63ff;
+        }
+
+        #fahren, #kelvin {
+            font-weight: bold;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>TEMPERATURE CONVERSION</h1>
+
+        <h2>Celsius</h2>
+        <input type="number" name="" id="input1">
+        <h2>Fahrenheit</h2>
+        <h2 id="fahren"></h2>
+        <h2>Kelvin</h2>
+        <h2 id="kelvin"></h2>
+    </div>
+
+    <script src="index5.js"></script>
+    
+</body>
+</html>
