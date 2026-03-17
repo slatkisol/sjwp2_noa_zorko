@@ -60,8 +60,68 @@ ul li a:hover {
   padding:40px;
 }
 
+.slika:hover{
+  transition: transform 0.3s ease;
+   transform: scale(1.1);
+}
+
+#modal1 {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+    animation: fadeIn 0.3s;
+}
+
+#modal1 .sadrzaj {
+background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+
+  display: flex;         
+  align-items: center;   
+  gap: 20px;              
+
+  animation: zoomIn 0.3s;
+  
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#modalText {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .film{
   text-align:center;
+}
+#modal1 .sadrzaj {
+  position: relative;
 }
 .naslov{
     margin-top: 30px;
@@ -69,7 +129,20 @@ ul li a:hover {
     font-size: 30px;
 
 }
-
+.prvi {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.prvi:hover {
+  color: red;
+  transform: scale(1.2);
+}
 .film img{
   width:100%;
   border-radius:8px;
@@ -87,40 +160,52 @@ ul li a:hover {
 <ul>
 <li><a href="pocetna.html">Početna</a></li>
 <li class="lijevo"><a href="dokumentarac.html">Dokumentarci</a></li>
-<li><a href="#news">Serije</a></li>
-<li><a href="#contact">Akcija</a></li>
-<li><a href="#about">Drama</a></li>
+<li><a href="serije.html">Serije</a></li>
+<li><a href="filmovi.html">Akcija</a></li>
+
 </ul>
 
 <h2 class="naslov">Dokumentarci:</h2>
 
 <div class="galerija">
 
-<div class="film"><img src="Slike/iloveimg-resized/81GA91C0F7L.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/MV5BMjAwMjU5NTAzOF5BMl5BanBnXkFtZTgwMjQwODQxMDI._V1_FMjpg_UX1000_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/MV5BMTg4Mjc1NjE4Ml5BMl5BanBnXkFtZTgwMjk2NjA1NjM._V1_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/MV5BMTQ3MjkyODA2Nl5BMl5BanBnXkFtZTcwNzQxMTU4Mw._V1_FMjpg_UX1000_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/MV5BMzY4NDBkMWYtYzdkYy00YzBjLWJmODctMWM4YjYzZTdjNWE5XkEyXkFqcGc._V1_.jpg"><p></p></div>
 
-<div class="film"><img src="Slike/iloveimg-resized/MV5BNTkyNTkwMzkxMl5BMl5BanBnXkFtZTcwMzAwOTE2OQ._V1_FMjpg_UX1000_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/MV5BNzg5NTA5NjgtMDExNS00ODFkLTgyMTctZGE5ZDBhNDU4ODIxXkEyXkFqcGc._V1_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/MV5BODI0MTE2MDMtZDM2MC00MGM5LTgzOGItMzhlNGViY2U2ODdjXkEyXkFqcGc._V1_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/Social_dilemma_xlg.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized/The_Last_Dance_2020.jpg"><p></p></div>
 
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BMjM1NDg1MjUzNF5BMl5BanBnXkFtZTgwNTAxNjIzNTM._V1_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BMTc3MTA4NDgzNl5BMl5BanBnXkFtZTcwOTAxNTQyMQ._V1_FMjpg_UX1000_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BMTc3Nzg2NzM5MF5BMl5BanBnXkFtZTcwMTYwMjU2Mg._V1_FMjpg_UX1000_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BMTM1NDc5MDYxMl5BMl5BanBnXkFtZTcwMjMzNDAzMQ._V1_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BNDBiZDhiZTYtYzJhNy00NDk3LWFjYjktZDA3OWNmYzJhNGVmXkEyXkFqcGc._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="our planet" src="Slike/iloveimg-resized/81GA91C0F7L.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="13th" src="Slike/iloveimg-resized/MV5BMjAwMjU5NTAzOF5BMl5BanBnXkFtZTgwMjQwODQxMDI._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="making a murderer" src="Slike/iloveimg-resized/MV5BMTg4Mjc1NjE4Ml5BMl5BanBnXkFtZTgwMjk2NjA1NjM._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="inside job" src="Slike/iloveimg-resized/MV5BMTQ3MjkyODA2Nl5BMl5BanBnXkFtZTcwNzQxMTU4Mw._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="planet earth 2" src="Slike/iloveimg-resized/MV5BMzY4NDBkMWYtYzdkYy00YzBjLWJmODctMWM4YjYzZTdjNWE5XkEyXkFqcGc._V1_.jpg"><p></p></div>
 
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BNjgwMGZhNDMtM2QzMC00NDM3LThlYmMtMGZlODRiMWEwNjgzXkEyXkFqcGc._V1_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BOWUzZDNjZTEtZDM1Mi00ODVkLWI4Y2UtYjAwZGVlM2YwNTg4XkEyXkFqcGc._V1_FMjpg_UX1000_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BYTRlMzk0NzctNTI3Ni00N2E2LWJiNGMtMDdlNjk1YWNmMzkyXkEyXkFqcGc._V1_FMjpg_UX1000_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BYWU5OGMxYjktMWY5Ny00NDJhLTgwMDktNjVmMTExZGIyODljXkEyXkFqcGc._V1_.jpg"><p></p></div>
-<div class="film"><img src="Slike/iloveimg-resized (1)/MV5BZmMzZmI2NzctNWNlMS00ZGE0LTljYjctNDQ5MDQ4Yzc0NDlkXkEyXkFqcGc._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="blackfish"src="Slike/iloveimg-resized/MV5BNTkyNTkwMzkxMl5BMl5BanBnXkFtZTcwMzAwOTE2OQ._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="free solo" src="Slike/iloveimg-resized/MV5BNzg5NTA5NjgtMDExNS00ODFkLTgyMTctZGE5ZDBhNDU4ODIxXkEyXkFqcGc._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="tiger king" src="Slike/iloveimg-resized/MV5BODI0MTE2MDMtZDM2MC00MGM5LTgzOGItMzhlNGViY2U2ODdjXkEyXkFqcGc._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="the social dilemma" src="Slike/iloveimg-resized/Social_dilemma_xlg.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="the last dance" src="Slike/iloveimg-resized/The_Last_Dance_2020.jpg"><p></p></div>
+
+<div class="film"><img class="slika" data-opis="won't you be my neighbor" src="Slike/iloveimg-resized (1)/MV5BMjM1NDg1MjUzNF5BMl5BanBnXkFtZTgwNTAxNjIzNTM._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="the fog of war" src="Slike/iloveimg-resized (1)/MV5BMTc3MTA4NDgzNl5BMl5BanBnXkFtZTcwOTAxNTQyMQ._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="the cove" src="Slike/iloveimg-resized (1)/MV5BMTc3Nzg2NzM5MF5BMl5BanBnXkFtZTcwMTYwMjU2Mg._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="march of the penguins" src="Slike/iloveimg-resized (1)/MV5BMTM1NDc5MDYxMl5BMl5BanBnXkFtZTcwMjMzNDAzMQ._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="apollo 11" src="Slike/iloveimg-resized (1)/MV5BNDBiZDhiZTYtYzJhNy00NDk3LWFjYjktZDA3OWNmYzJhNGVmXkEyXkFqcGc._V1_.jpg"><p></p></div>
+
+<div class="film"><img class="slika" data-opis="the game changers" src="Slike/iloveimg-resized (1)/MV5BNjgwMGZhNDMtM2QzMC00NDM3LThlYmMtMGZlODRiMWEwNjgzXkEyXkFqcGc._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="seaspiracy" src="Slike/iloveimg-resized (1)/MV5BOWUzZDNjZTEtZDM1Mi00ODVkLWI4Y2UtYjAwZGVlM2YwNTg4XkEyXkFqcGc._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="cosmos" src="Slike/iloveimg-resized (1)/MV5BYTRlMzk0NzctNTI3Ni00N2E2LWJiNGMtMDdlNjk1YWNmMzkyXkEyXkFqcGc._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="my octopus teacher" src="Slike/iloveimg-resized (1)/MV5BYWU5OGMxYjktMWY5Ny00NDJhLTgwMDktNjVmMTExZGIyODljXkEyXkFqcGc._V1_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="icarus"  src="Slike/iloveimg-resized (1)/MV5BZmMzZmI2NzctNWNlMS00ZGE0LTljYjctNDQ5MDQ4Yzc0NDlkXkEyXkFqcGc._V1_.jpg"><p></p></div>
 
 </div>
 
+<div id="modal1">
+  <div class="sadrzaj">
+    <span class="prvi">&times;</span>
+    <img id="modalSlika" style="width:100%">
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script src="dokumentarac.js"></script>
+  
 </body>
 </html>
