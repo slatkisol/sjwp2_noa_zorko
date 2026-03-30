@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
 body {
   margin: 0;
   padding: 0;
@@ -25,11 +26,13 @@ ul {
 ul li {
   float: left;
 }
+
 .naslov{
-    margin-left:40% ;
+  margin-left:40%;
 }
+
 .lijevo{
-    margin-left: 150px;
+  margin-left:150px;
 }
 
 ul li a {
@@ -37,40 +40,172 @@ ul li a {
   color: white;
   text-align: center;
   padding: 20px 22px;
-  margin-left:40px ;
-  margin-right: 40px;
+  margin-left:40px;
+  margin-right:40px;
   text-decoration: none;
-  width: 120px;
-  font-size: 20px;
-}
-.paragraf1{
-    margin-top: 120px;
-    margin-left: 600px;
-    font-size: 26px;
-    font-weight: bold;
+  width:120px;
+  font-size:20px;
 }
 
 ul li a:hover {
-  background-color: #111111;
+  background-color:#111111;
+}
 
+
+
+.galerija{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:20px;
+  padding:40px;
+}
+
+.slika:hover{
+  transition: transform 0.3s ease;
+   transform: scale(1.1);
+}
+
+#modal1 {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+    animation: fadeIn 0.3s;
+}
+
+#modal1 .sadrzaj {
+background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+
+  display: flex;         
+  align-items: center;   
+  gap: 20px;              
+
+  animation: zoomIn 0.3s;
+  
+}
+
+.tekst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#modalText {
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.film{
+  text-align:center;
+}
+#modal1 .sadrzaj {
+  position: relative;
+}
+.naslov{
+    margin-top: 30px;
+    margin-left: 200px;
+    font-size: 30px;
 
 }
+.prvi {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.prvi:hover {
+  color: red;
+  transform: scale(1.2);
+}
+.film img{
+  width:100%;
+  border-radius:8px;
+}
+
+.film p{
+  font-weight:bold;
+}
+
 </style>
 </head>
+
 <body>
 
-    <ul>
-        <li><a href="pocetna.html">Početna</a></li>
-  <li class="lijevo"><a href="dokumentarac.html">Dokumentarci</a></li>
-  <li><a href="serije.html">Serije</a></li>
-  <li><a href="filmovi.html">Akcija</a></li>
- 
-    </ul>
+<ul>
+<li><a href="pocetna.html">Početna</a></li>
+<li class="lijevo"><a href="dokumentarac.html">Dokumentarci</a></li>
+<li><a href="serije.html">Serije</a></li>
+<li><a href="filmovi.html">Filmovi</a></li>
 
-    <h1 class="naslov">Movie Gallery</h1>
-    <p class="paragraf1">Kliknite na željeni žanr i odaberite film ili seriju</p>
+</ul>
 
-    
+<h2 class="naslov">Filmovi:</h2>
+
+<div class="galerija">
+
+
+
+<div class="film"><img class="slika" data-opis="the shawshank redemption" src="Slike/Filmovi/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc._V1_FMjpg_UX1000_.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="forrest gump" src="Slike/Filmovi/forrestgump.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="the godfather" src="Slike/Filmovi/thegodfather.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="schindler's list" src="Slike/Filmovi/Schindler's_List_movie.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="fight club" src="Slike/Filmovi/fightclub.jpg"><p></p></div>
+
+<div class="film"><img class="slika" data-opis="inception" src="Slike/Filmovi/inception.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="interstellar" src="Slike/Filmovi/interstellar.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="the matrix" src="Slike/Filmovi/matrix.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="blade runner 2049" src="Slike/Filmovi/bladerunner.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="arrival" src="Slike/Filmovi/arrival.jpg"><p></p></div>
+
+<div class="film"><img class="slika" data-opis="seven" src="Slike/Filmovi/seven.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="gone girl" src="Slike/Filmovi/gonegirl.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="prisoners" src="Slike/Filmovi/prisoners.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="shutter island" src="Slike/Filmovi/shutterisland.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="the silence of the lambs" src="Slike/Filmovi/thesilenceofthelambs.jpg"><p></p></div>
+
+<div class="film"><img class="slika" data-opis="the dark knight" src="Slike/Filmovi/thedarkknight.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="gladiator" src="Slike/Filmovi/gladiator.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="mad max fury road" src="Slike/Filmovi/madmax.png"><p></p></div>
+<div class="film"><img class="slika" data-opis="john wick" src="Slike/Filmovi/johnwick.jpg"><p></p></div>
+<div class="film"><img class="slika" data-opis="dune"  src="Slike/Filmovi/dune.jpg"><p></p></div>
+
+</div>
+
+<div id="modal1">
+  <div class="sadrzaj">
+    <span class="prvi">&times;</span>
+    <img id="modalSlika" style="width:100%">
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script src="filmovi.js"></script>
+  
 </body>
 </html>
-
