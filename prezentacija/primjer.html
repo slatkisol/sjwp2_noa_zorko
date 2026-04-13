@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Async primjer</title>
+</head>
+<body>
+
+<h1>Provjeri konzolu</h1>
+
+<script>
+async function primjer() {
+  let rezultat = await new Promise((resolve) => {
+    setTimeout(() => resolve("Završeno"), 5000);
+  });
+
+  console.log(rezultat);
+}
+
+primjer();
+</script>
+
+</body>
+</html>
